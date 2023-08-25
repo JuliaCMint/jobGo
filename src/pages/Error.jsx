@@ -9,7 +9,9 @@ const Error = () => {
         <img src={imgError} alt='not found' />
         <h3>Something went wrong!</h3>
         <p>Page not found</p>
-        <Link to='/'>back home</Link>
+        <Link to='/' className='btn btn-hero'>
+          back home
+        </Link>
       </div>
     </Wrapper>
   );
@@ -30,14 +32,9 @@ const Wrapper = styled.main`
     margin-bottom: 0.5rem;
   }
   p {
-    margin-top: 0;
-    margin-bottom: 0.5rem;
+    margin-top: 1rem;
+    margin-bottom: 1.5rem;
     color: var(--grey-light);
-  }
-  a {
-    color: var(--primary-dark);
-    text-decoration: underline;
-    text-transform: uppercase;
   }
 `;
 
