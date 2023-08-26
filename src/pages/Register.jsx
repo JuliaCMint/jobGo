@@ -21,18 +21,25 @@ const Register = () => {
     console.log(e.target);
   };
 
+  const toggleRegistered = () => {
+    setValues({ ...values, isRegistered: !values.isRegistered });
+  };
+
   return (
     <Wrapper>
       <form className='form' onSubmit={handleSubmit}>
         <Logo />
-        <h3>Login</h3>
+        <h3>{values.isRegistered ? "Sign in" : "Sign up"}</h3>
         {/* name */}
-        <FormRow
-          type='text'
-          name='name'
-          value={values.name}
-          handleChange={handleChange}
-        />
+        {!values.isRegistered && (
+          <FormRow
+            type='text'
+            name='name'
+            value={values.name}
+            handleChange={handleChange}
+          />
+        )}
+
         {/* email */}
         <FormRow
           type='email'
@@ -50,6 +57,16 @@ const Register = () => {
         <button type='submit' className='btn btn-block'>
           submit
         </button>
+        <p>
+          {values.isRegistered ? "Not a member yet?" : "Already a jobGo user?"}
+          <button
+            type='button'
+            onClick={toggleRegistered}
+            className='register-btn'
+          >
+            {values.isRegistered ? "Sign up" : "Sign in"}
+          </button>
+        </p>
       </form>
     </Wrapper>
   );
@@ -81,7 +98,7 @@ const Wrapper = styled.section`
   .btn {
     margin-top: 1rem;
   }
-  .member-btn {
+  .register-btn {
     background: transparent;
     border: transparent;
     color: var(--primary-dark);
