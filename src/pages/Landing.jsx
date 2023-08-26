@@ -31,6 +31,7 @@ const Landing = () => {
 };
 
 const Wrapper = styled.main`
+  background-color: var(--white);
   nav {
     width: var(--fluid-width);
     max-width: var(--max-width);
