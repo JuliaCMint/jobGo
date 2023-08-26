@@ -1,6 +1,7 @@
 import { styled } from "styled-components";
 import { Logo, FormRow } from "../components";
 import { useState, useEffect } from "react";
+import { toast } from "react-toastify";
 
 const initialState = {
   name: "",
@@ -13,12 +14,17 @@ const Register = () => {
   const [values, setValues] = useState(initialState);
 
   const handleChange = (e) => {
-    console.log(e.target);
+    const name = e.target.name;
+    const value = e.target.value;
+    setValues({ ...values, [name]: value });
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log(e.target);
+    const { name, email, password, isRegistered } = values;
+    if (!email || !password || (!isRegistered && !name)) {
+      toast.error("Please, fill out all the fields");
+    }
   };
 
   const toggleRegistered = () => {
