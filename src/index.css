@@ -40,9 +40,6 @@ html {
   --breakpoint-lg: 992px;
   --nav-height: 6rem;
 }
-#root {
-  padding: 0;
-}
 body {
   background: var(--grey-extra-light);
   font-family: var(--font);
