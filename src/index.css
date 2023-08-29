@@ -50,10 +50,10 @@ body {
   line-height: 1.75;
   color: var(--textColor);
 }
-/* .logo {
+.logo {
   height: 4rem;
   padding: 0;
-} */
+}
 
 p {
   margin-bottom: 1.5rem;
