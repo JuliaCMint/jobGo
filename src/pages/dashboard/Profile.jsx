@@ -1,9 +1,9 @@
 import { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { toast } from "react-toastify";
-import { loginUser } from "../../features/user/userSlice";
 import { FormRow } from "../../components";
 import { styled } from "styled-components";
+import { updateUser } from "../../features/user/userSlice";
 
 const Profile = () => {
   const { isLoading, user } = useSelector((store) => store.user);
@@ -19,13 +19,10 @@ const Profile = () => {
     e.preventDefault();
     const { name, email, lastName, location } = userData;
     if (!name || !email || !lastName || !location) {
-      toast.error("please fill out all fields");
+      toast.error("Please fill out all fields");
       return;
     }
-    if (isRegistered) {
-      dispatch(loginUser({ email: email, password: password }));
-      return;
-    }
+    dispatch(updateUser(userData));
   };
 
   const handleChange = (e) => {
