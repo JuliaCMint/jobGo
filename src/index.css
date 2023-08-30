@@ -12,11 +12,13 @@ html {
   /* colors */
   --primary-extra-light: #f6f6f9;
   --primary-light: #eaecfc;
+  --primary-medium: #815ecc;
   --primary-dark: #6136bf;
   --black: #0d0d0d;
   --white: #f2f2f2;
   --grey-extra-light: #e1e1e3;
-  --grey-light: #b5b5b9;
+  --grey-light: #9a9aa0;
+  --grey-medium: #727279;
   --grey-dark: #353540;
   --red-light: #f3cbd2;
   --red-dark: #db3754;
