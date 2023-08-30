@@ -70,7 +70,7 @@ const Wrapper = styled.aside`
     background: transparent;
     border-color: transparent;
     font-size: 2rem;
-    color: var(--black);
+    color: var(--grey-dark);
     cursor: pointer;
   }
   .nav-links {
