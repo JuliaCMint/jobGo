@@ -3,8 +3,7 @@ import Logo from "./Logo";
 import { IoCloseOutline } from "react-icons/io5";
 import { useDispatch, useSelector } from "react-redux";
 import { toggleSidebar } from "../features/user/userSlice";
-import { NavLink } from "react-router-dom";
-import links from "../utils/links.jsx";
+import NavLinks from "./NavLinks";
 
 const SmallSidebar = () => {
   const { isSidebarOpen } = useSelector((store) => store.user);
@@ -27,25 +26,7 @@ const SmallSidebar = () => {
           </button>
           <header>
             <Logo />
-            <div className='nav-links'>
-              {links.map((link) => {
-                const { id, text, path, icon } = link;
-                return (
-                  <NavLink
-                    to={path}
-                    className={({ isActive }) =>
-                      isActive ? "nav-link active" : "nav-link"
-                    }
-                    key={id}
-                    onClick={toggle}
-                    end
-                  >
-                    <span className='icon'>{icon}</span>
-                    {text}
-                  </NavLink>
-                );
-              })}
-            </div>
+            <NavLinks toggleSidebar={toggle} />
           </header>
         </div>
       </div>
