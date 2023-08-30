@@ -106,7 +106,8 @@ const Wrapper = styled.section`
   .logo {
     display: block;
     margin: 0 auto;
-    margin-bottom: 1.38rem;
+    margin-bottom: 2rem;
+    width: 8rem;
   }
   .form {
     max-width: 400px;
