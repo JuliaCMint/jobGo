@@ -75,6 +75,9 @@ const Wrapper = styled.section`
     display: flex;
     align-items: center;
   }
+  .toggle-btn:hover {
+    color: var(--grey-dark);
+  }
   background: var(--white);
   .btn-container {
     position: relative;
