@@ -126,8 +126,7 @@ const Wrapper = styled.section`
     border-color: var(--grey-light);
   }
   .clear-btn:hover {
-    background: var(--primary-medium);
-    color: var(--white);
+    color: var(--black);
     border-color: var(--primary-dark);
   }
   @media (min-width: 992px) {
