@@ -73,6 +73,9 @@ const Wrapper = styled.aside`
     color: var(--grey-dark);
     cursor: pointer;
   }
+  .close-btn:hover {
+    color: var(--grey-light);
+  }
   .nav-links {
     padding-top: 2rem;
     display: flex;
@@ -81,16 +84,16 @@ const Wrapper = styled.aside`
   .nav-link {
     display: flex;
     align-items: center;
-    color: var(--grey-dark);
+    color: var(--grey-medium);
     padding: 1rem 0;
     text-transform: capitalize;
     transition: var(--transition);
   }
   .nav-link:hover {
-    color: var(--grey-light);
+    color: var(--primary-dark);
   }
   .nav-link:hover .icon {
-    color: var(--primary-500);
+    color: var(--grey-dark);
   }
   .icon {
     font-size: 1.5rem;
@@ -100,7 +103,7 @@ const Wrapper = styled.aside`
     transition: var(--transition);
   }
   .active {
-    color: var(--grey-light);
+    color: var(--grey-dark);
   }
   .active .icon {
     color: var(--primary-dark);
