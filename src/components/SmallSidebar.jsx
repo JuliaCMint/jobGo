@@ -74,7 +74,7 @@ const Wrapper = styled.aside`
     cursor: pointer;
   }
   .close-btn:hover {
-    color: var(--grey-light);
+    color: var(--grey-medium);
   }
   .nav-links {
     padding-top: 2rem;
