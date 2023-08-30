@@ -58,7 +58,7 @@ const Wrapper = styled.section`
   .logo {
     display: flex;
     align-items: center;
-    width: 100px;
+    width: 6rem;
   }
   .nav-center {
     display: flex;

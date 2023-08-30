@@ -37,6 +37,11 @@ const Wrapper = styled.aside`
   @media (min-width: 992px) {
     display: none;
   }
+  .logo {
+    display: flex;
+    align-items: center;
+    width: 8rem;
+  }
   .sidebar-container {
     position: fixed;
     inset: 0;
