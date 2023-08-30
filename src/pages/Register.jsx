@@ -30,6 +30,7 @@ const Register = () => {
     const { name, email, password, isRegistered } = values;
     if (!email || !password || (!isRegistered && !name)) {
       toast.error("Please, fill out all the fields");
+      return;
     }
     if (isRegistered) {
       dispatch(loginUser({ email: email, password: password }));
