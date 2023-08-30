@@ -40,6 +40,9 @@ const Wrapper = styled.main`
     display: flex;
     align-items: center;
   }
+  .logo {
+    width: 8rem;
+  }
   .page {
     min-height: calc(100vh - var(--nav-height));
     display: grid;
