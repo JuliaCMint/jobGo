@@ -1,7 +1,8 @@
 import { useDispatch, useSelector } from "react-redux";
 import { toast } from "react-toastify";
 import { styled } from "styled-components";
-import FormRow from "../../components/FormRow";
+import { FormRow, FormRowSelect } from "../../components";
+import { handleChange } from "../../features/job/jobSlice";
 
 const AddJob = () => {
   const {
@@ -30,6 +31,7 @@ const AddJob = () => {
   const handleJobInput = (e) => {
     const name = e.target.name;
     const value = e.target.value;
+    dispatch(handleChange({ name, value }));
   };
 
   return (
@@ -42,7 +44,7 @@ const AddJob = () => {
           type='text'
           name='position'
           value={position}
-          handleChange={console.log("position")}
+          handleChange={handleJobInput}
         />
         {/* company */}
         <FormRow
@@ -58,6 +60,21 @@ const AddJob = () => {
           labelText='job location'
           value={jobLocation}
           handleChange={handleJobInput}
+        />
+        {/* status */}
+        <FormRowSelect
+          name='status'
+          value={status}
+          handleChange={handleJobInput}
+          list={statusOptions}
+        />
+        {/* job type */}
+        <FormRowSelect
+          name='job type'
+          labelText='job type'
+          value={jobType}
+          handleChange={handleJobInput}
+          list={jobTypeOptions}
         />
 
         <div className='btn-container'>
