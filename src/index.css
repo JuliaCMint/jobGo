@@ -213,6 +213,7 @@ full-page {
   border-radius: var(--borderRadiusSquare);
   background: var(--backgroundColor);
   border: 1px solid var(--grey-light);
+  color: var(--grey-medium);
 }
 .form-input,
 .form-select,
