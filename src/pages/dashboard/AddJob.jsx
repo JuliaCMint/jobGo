@@ -7,6 +7,7 @@ import {
   handleChange,
   createJob,
 } from "../../features/job/jobSlice";
+import { useEffect } from "react";
 
 const AddJob = () => {
   const {
@@ -21,6 +22,7 @@ const AddJob = () => {
     isEditing,
     editJobId,
   } = useSelector((store) => store.job);
+  const { user } = useSelector((store) => store.user);
   const dispatch = useDispatch();
 
   const handleSubmit = (e) => {
@@ -38,6 +40,15 @@ const AddJob = () => {
     const value = e.target.value;
     dispatch(handleChange({ name, value }));
   };
+
+  useEffect(() => {
+    dispatch(
+      handleChange({
+        name: "jobLocation",
+        value: user.location,
+      })
+    );
+  }, []);
 
   return (
     <Wrapper>
