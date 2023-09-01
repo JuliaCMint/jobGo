@@ -236,3 +236,22 @@ full-page {
   letter-spacing: var(--letterSpacing);
   text-transform: capitalize;
 }
+
+/* loading */
+
+@keyframes spinner {
+  to {
+    transform: rotate(360deg);
+  }
+}
+.loading {
+  width: 6rem;
+  height: 6rem;
+  border: 5px solid var(--grey-light);
+  border-radius: 50%;
+  border-top-color: var(--primary-medium);
+  animation: spinner 2s linear infinite;
+}
+.loading-center {
+  margin: 0 auto;
+}
