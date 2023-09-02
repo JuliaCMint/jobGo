@@ -1,7 +1,6 @@
 import { styled } from "styled-components";
 import { BiChevronDown } from "react-icons/bi";
-import { BsLayoutSidebar } from "react-icons/bs";
-import { PiUserBold } from "react-icons/pi";
+import { PiSidebar, PiUserBold } from "react-icons/pi";
 import Logo from "./Logo";
 import { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
@@ -23,7 +22,7 @@ const Navbar = () => {
     <Wrapper>
       <div className='nav-center'>
         <button type='button' className='toggle-btn' onClick={toggle}>
-          <BsLayoutSidebar />
+          <PiSidebar />
         </button>
         <div>
           <Logo />
