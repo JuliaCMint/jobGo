@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { styled } from "styled-components";
 import { PiMapPin, PiCalendarCheck, PiBriefcase } from "react-icons/pi";
 import JobInfo from "./JobInfo";
+import moment from "moment";
 
 const Job = ({
   _id,
@@ -15,7 +16,7 @@ const Job = ({
 }) => {
   const dispatch = useDispatch();
 
-  const date = createdAt;
+  const date = moment(createdAt).format("MMM Do YY");
 
   return (
     <Wrapper>
