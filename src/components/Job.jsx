@@ -4,6 +4,7 @@ import { styled } from "styled-components";
 import { PiMapPin, PiCalendarCheck, PiBriefcase } from "react-icons/pi";
 import JobInfo from "./JobInfo";
 import moment from "moment";
+import { deleteJob } from "../features/job/jobSlice";
 
 const Job = ({
   _id,
@@ -48,9 +49,7 @@ const Job = ({
             <button
               type='button'
               className='btn delete-btn'
-              onClick={() => {
-                console.log("delete job");
-              }}
+              onClick={() => dispatch(deleteJob(_id))}
             >
               Delete
             </button>
