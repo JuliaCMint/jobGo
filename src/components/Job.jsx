@@ -4,7 +4,7 @@ import { styled } from "styled-components";
 import { PiMapPin, PiCalendarCheck, PiBriefcase } from "react-icons/pi";
 import JobInfo from "./JobInfo";
 import moment from "moment";
-import { deleteJob } from "../features/job/jobSlice";
+import { deleteJob, setEditJob } from "../features/job/jobSlice";
 
 const Job = ({
   _id,
@@ -40,9 +40,19 @@ const Job = ({
             <Link
               to='/add-job'
               className='btn edit-btn'
-              onClick={() => {
-                console.log("edit job");
-              }}
+              onClick={() =>
+                dispatch(
+                  setEditJob({
+                    editJobId: _id,
+                    position,
+                    company,
+                    jobLocation,
+                    jobType,
+                    createdAt,
+                    status,
+                  })
+                )
+              }
             >
               Edit
             </Link>
