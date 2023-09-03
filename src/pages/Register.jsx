@@ -83,6 +83,18 @@ const Register = () => {
         <button type='submit' className='btn btn-block' disabled={isLoading}>
           {isLoading ? "loading..." : "submit"}
         </button>
+        <button
+          type='button'
+          className='btn btn-block'
+          disabled={isLoading}
+          onClick={() => {
+            dispatch(
+              loginUser({ email: "testUser@test.com", password: "secret" })
+            );
+          }}
+        >
+          {isLoading ? "loading..." : "demo"}
+        </button>
         <p>
           {values.isRegistered ? "Not a member yet?" : "Already a jobGo user?"}
           <button
