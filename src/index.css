@@ -24,6 +24,8 @@ html {
   --red-dark: #db3754;
   --green-light: #ccf7e0;
   --green-dark: #00d563;
+  --yellow-light: #fae5ab;
+  --yellow-dark: #f2bd2c;
 
   /* fonts  */
   --font: "Roboto", Sans-Serif;
