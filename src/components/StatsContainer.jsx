@@ -2,6 +2,7 @@ import { useSelector } from "react-redux";
 import StatItem from "./StatItem";
 import { styled } from "styled-components";
 import { MdCheckCircleOutline, MdSchedule, MdCancel } from "react-icons/md";
+import PieChartComponent from "./PieChartComponent";
 
 const StatsContainer = () => {
   const { stats } = useSelector((store) => store.allJobs);
@@ -32,9 +33,12 @@ const StatsContainer = () => {
 
   return (
     <Wrapper>
-      {defaultStats.map((item, index) => {
-        return <StatItem key={index} {...item} />;
-      })}
+      <PieChartComponent data={defaultStats} />
+      <div>
+        {defaultStats.map((item, index) => {
+          return <StatItem key={index} {...item} />;
+        })}
+      </div>
     </Wrapper>
   );
 };
@@ -47,7 +51,8 @@ const Wrapper = styled.section`
     column-gap: 1rem;
   }
   @media (min-width: 1120px) {
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
     column-gap: 1rem;
   }
 `;
