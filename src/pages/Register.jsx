@@ -100,7 +100,7 @@ const Register = () => {
           <button
             type='button'
             onClick={toggleRegistered}
-            className='register-btn'
+            className='btn-secondary'
           >
             {values.isRegistered ? "Sign up" : "Sign in"}
           </button>
@@ -136,13 +136,6 @@ const Wrapper = styled.section`
   }
   .btn {
     margin-top: 1rem;
-  }
-  .register-btn {
-    background: transparent;
-    border: transparent;
-    color: var(--primary-dark);
-    cursor: pointer;
-    letter-spacing: var(--letterSpacing);
   }
 `;
 
