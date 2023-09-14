@@ -24,7 +24,7 @@ const Job = ({
       <header>
         <div className='main-icon'>{company.charAt(0)}</div>
         <div className='info'>
-          <h5>{position}</h5>
+          <h4>{position}</h4>
           <p>{company}</p>
         </div>
       </header>
@@ -37,6 +37,13 @@ const Job = ({
         </div>
         <footer>
           <div className='actions'>
+            <button
+              type='button'
+              className='btn-secondary'
+              onClick={() => dispatch(deleteJob(_id))}
+            >
+              Delete
+            </button>
             <Link
               to='/add-job'
               className='btn edit-btn'
@@ -56,13 +63,6 @@ const Job = ({
             >
               Edit
             </Link>
-            <button
-              type='button'
-              className='btn-secondary'
-              onClick={() => dispatch(deleteJob(_id))}
-            >
-              Delete
-            </button>
           </div>
         </footer>
       </div>
@@ -77,7 +77,7 @@ const Wrapper = styled.article`
   grid-template-rows: 1fr auto;
 
   header {
-    padding: 1rem 1.5rem;
+    padding: 3rem 1.5rem;
     border-bottom: 1px solid var(--grey-extra-light);
     display: grid;
     grid-template-columns: auto 1fr;
@@ -100,14 +100,15 @@ const Wrapper = styled.article`
     margin-right: 2rem;
   }
   .info {
-    h5 {
+    h4 {
       margin-bottom: 0.25rem;
     }
     p {
       margin: 0;
       text-transform: capitalize;
-      color: var(--grey-dark);
+      color: var(--grey-medium);
       letter-spacing: var(--letterSpacing);
+      font-size: 0.9rem;
     }
   }
   .pending {
@@ -150,7 +151,10 @@ const Wrapper = styled.article`
     margin-top: 0.5rem;
   }
   footer {
-    margin-top: 1rem;
+    display: flex;
+    justify-content: flex-end;
+    margin: 4rem 0 1.5rem;
+    padding: 0 1.5rem;
   }
   .btn {
     letter-spacing: var(--letterSpacing);
@@ -158,12 +162,7 @@ const Wrapper = styled.article`
     height: 2rem;
   }
   .edit-btn {
-    background-color: var(--primary-medium);
-    border-color: var(--primary-medium);
-    margin-right: 0.5rem;
-  }
-  .edit-btn:hover {
-    background-color: var(--primary-dark);
+    margin-left: 0.5rem;
   }
   &:hover .actions {
     visibility: visible;
