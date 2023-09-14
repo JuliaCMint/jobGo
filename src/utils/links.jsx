@@ -6,13 +6,13 @@ import { CgProfile } from "react-icons/cg";
 const links = [
   { id: 1, text: "stats", path: "/", icon: <AiOutlineLineChart /> },
   {
-    id: 1,
+    id: 2,
     text: "all jobs",
     path: "all-jobs",
     icon: <AiOutlineUnorderedList />,
   },
-  { id: 1, text: "add job", path: "add-job", icon: <AiOutlineFileAdd /> },
-  { id: 1, text: "profile", path: "profile", icon: <CgProfile /> },
+  { id: 3, text: "add job", path: "add-job", icon: <AiOutlineFileAdd /> },
+  { id: 4, text: "profile", path: "profile", icon: <CgProfile /> },
 ];
 
 export default links;
