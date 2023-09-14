@@ -164,6 +164,16 @@ ul {
   width: 100%;
   border-radius: var(--borderRadiusSmall);
 }
+.btn-block-secondary {
+  width: 100%;
+  border-radius: var(--borderRadiusSmall);
+  background-color: var(--white);
+  color: var(--primary-dark);
+}
+.btn-block-secondary:hover {
+  background-color: var(--primary-light);
+  color: var(--primary-extra-dark);
+}
 .btn-hero {
   font-size: 1.25rem;
   padding: 1.25rem 1.75rem;

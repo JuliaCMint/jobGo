@@ -85,7 +85,7 @@ const Register = () => {
         </button>
         <button
           type='button'
-          className='btn btn-block'
+          className='btn btn-block-secondary'
           disabled={isLoading}
           onClick={() => {
             dispatch(
