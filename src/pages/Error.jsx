@@ -34,7 +34,7 @@ const Wrapper = styled.main`
   p {
     margin-top: 1rem;
     margin-bottom: 1.5rem;
-    color: var(--grey-light);
+    color: var(--grey-medium);
   }
 `;
 
