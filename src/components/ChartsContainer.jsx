@@ -30,9 +30,13 @@ const Wrapper = styled.article`
     background: transparent;
     border-color: transparent;
     text-transform: capitalize;
-    color: var(--primary-500);
+    color: var(--primary-dark);
+    text-decoration: underline;
     font-size: 1.25rem;
     cursor: pointer;
+  }
+  button:hover {
+    color: var(--primary-medium);
   }
   h4 {
     text-align: center;
