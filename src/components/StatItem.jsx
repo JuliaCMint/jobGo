@@ -7,26 +7,27 @@ const StatItem = ({ title, count, icon, color, bcg }) => {
         <span className='count'>{count}</span>
         <span className='icon'>{icon}</span>
       </header>
-      <h5 className='title'>{title}</h5>
+      <h6 className='title'>{title}</h6>
     </Wrapper>
   );
 };
 
 const Wrapper = styled.article`
-  padding: 2rem;
-  background: var(--white);
+  padding: 1rem;
+  margin-bottom: 0.2rem;
+  /* background: ${(props) => props.color}; */
   border-radius: var(--borderRadiusSmall);
-  border-bottom: 5px solid ${(props) => props.color};
+  /* border-bottom: 5px solid ${(props) => props.color}; */
   header {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: start;
   }
   .count {
     display: block;
     font-weight: 700;
     font-size: 50px;
-    color: ${(props) => props.color};
+    /* color: ${(props) => props.color}; */
   }
   .title {
     margin: 0;
@@ -36,15 +37,15 @@ const Wrapper = styled.article`
     margin-top: 0.5rem;
   }
   .icon {
-    width: 70px;
-    height: 60px;
+    width: 80px;
+    height: 80px;
     background: ${(props) => props.bcg};
     border-radius: var(--borderRadius);
     display: flex;
     align-items: center;
     justify-content: center;
     svg {
-      font-size: 2rem;
+      font-size: 1.3rem;
       color: ${(props) => props.color};
     }
   }
