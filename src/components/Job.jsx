@@ -58,7 +58,7 @@ const Job = ({
             </Link>
             <button
               type='button'
-              className='btn delete-btn'
+              className='btn-secondary'
               onClick={() => dispatch(deleteJob(_id))}
             >
               Delete
@@ -91,7 +91,7 @@ const Wrapper = styled.article`
     height: 60px;
     display: grid;
     place-items: center;
-    background: var(--primary-dark);
+    background: var(--primary-extra-dark);
     border-radius: var(--borderRadius);
     font-size: 1.5rem;
     font-weight: 700;
@@ -112,11 +112,11 @@ const Wrapper = styled.article`
   }
   .pending {
     background: #fcefc7;
-    color: #e9b949;
+    color: #ba943a;
   }
   .interview {
-    background: #e0e8f9;
-    color: #647acb;
+    background: #e6fbf0;
+    color: #7a9486;
   }
   .declined {
     color: #d66a6a;
@@ -152,20 +152,18 @@ const Wrapper = styled.article`
   footer {
     margin-top: 1rem;
   }
-  .edit-btn,
-  .delete-btn {
+  .btn {
     letter-spacing: var(--letterSpacing);
     cursor: pointer;
-    height: 30px;
+    height: 2rem;
   }
   .edit-btn {
-    color: var(--green-dark);
-    background: var(--green-light);
+    background-color: var(--primary-medium);
+    border-color: var(--primary-medium);
     margin-right: 0.5rem;
   }
-  .delete-btn {
-    color: var(--red-dark);
-    background: var(--red-light);
+  .edit-btn:hover {
+    background-color: var(--primary-dark);
   }
   &:hover .actions {
     visibility: visible;

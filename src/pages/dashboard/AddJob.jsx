@@ -108,7 +108,7 @@ const AddJob = () => {
         <div className='btn-container'>
           <button
             type='button'
-            className='btn btn-block clear-btn'
+            className='btn-secondary'
             onClick={() => dispatch(clearValues())}
           >
             clear
@@ -164,15 +164,6 @@ const Wrapper = styled.section`
     button {
       height: 35px;
     }
-  }
-  .clear-btn {
-    color: var(--primary-dark);
-    background-color: var(--white);
-    border-color: var(--grey-light);
-  }
-  .clear-btn:hover {
-    color: var(--black);
-    border-color: var(--primary-dark);
   }
   @media (min-width: 992px) {
     .form-center {
