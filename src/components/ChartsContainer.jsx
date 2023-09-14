@@ -5,7 +5,7 @@ import AreaChart from "./AreaChartComponent";
 import { useSelector } from "react-redux";
 
 const ChartsContainer = () => {
-  const [barChart, setBarChart] = useState(true);
+  const [barChart, setBarChart] = useState(false);
   const { monthlyApplications: data } = useSelector((store) => store.allJobs);
   return (
     <Wrapper>
