@@ -98,11 +98,11 @@ const Wrapper = styled.section`
     top: 40px;
     left: 0;
     width: 100%;
-    background: var(--primary-light);
-    /* padding: 0.5rem; */
+    background: var(--white);
+    padding: 0.5rem;
     text-align: center;
     visibility: hidden;
-    border-radius: var(--borderRadiusSmall);
+    border-radius: var(--borderRadius);
   }
   .show-dropdown {
     visibility: visible;
