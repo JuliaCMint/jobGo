@@ -32,7 +32,7 @@ const SearchContainer = () => {
   return (
     <Wrapper>
       <form className='form'>
-        <h4>search form</h4>
+        <h3>search form</h3>
         <div className='form-center'>
           {/* search position */}
           <FormRow
