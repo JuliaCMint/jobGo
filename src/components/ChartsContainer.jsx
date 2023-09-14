@@ -39,7 +39,7 @@ const Wrapper = styled.article`
     cursor: pointer;
   }
   button:hover {
-    color: var(--primary-medium);
+    color: var(--primary-extra-dark);
   }
   h4 {
     text-align: center;
