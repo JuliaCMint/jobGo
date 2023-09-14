@@ -15,10 +15,8 @@ const Landing = () => {
             job <span>tracking</span> app
           </h1>
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut
-            repellat rem animi totam, eligendi eaque odit ipsa ullam suscipit
-            odio voluptate voluptatibus ab consequatur fugiat pariatur? Delectus
-            modi accusamus repudiandae!
+            Organize your job search with jobGo. Keep it simple.
+            <br /> Track your progress. Stay focused.
           </p>
           <Link to='/register' className='btn btn-hero'>
             Login/Register
