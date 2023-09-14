@@ -12,29 +12,29 @@ const StatsContainer = () => {
       title: "pending applications",
       count: stats.pending || 0,
       icon: <MdCheckCircleOutline />,
-      color: "#f2bd2c",
-      bcg: "#fae5ab",
+      color: "#6136bf",
+      bcg: "#fff",
     },
     {
       title: "interviews scheduled",
       count: stats.interview || 0,
       icon: <MdSchedule />,
-      color: "#00d563",
-      bcg: "#ccf7e0",
+      color: "#41EAD4",
+      bcg: "#fff",
     },
     {
       title: "jobs declined",
       count: stats.declined || 0,
       icon: <MdCancel />,
-      color: "#db3754",
-      bcg: "#f3cbd2",
+      color: "#F71735",
+      bcg: "#fff",
     },
   ];
 
   return (
     <Wrapper>
       <PieChartComponent data={defaultStats} />
-      <div>
+      <div className='stat-items'>
         {defaultStats.map((item, index) => {
           return <StatItem key={index} {...item} />;
         })}
@@ -44,16 +44,29 @@ const StatsContainer = () => {
 };
 
 const Wrapper = styled.section`
-  display: grid;
-  row-gap: 2rem;
+  display: flex;
+  flex-direction: column;
+  /* row-gap: 2rem; */
+  background-color: var(--white);
+  justify-content: center;
+  align-items: center;
+  border-radius: var(--borderRadiusSmall);
+
+  .stat-items {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
   @media (min-width: 768px) {
-    grid-template-columns: 1fr 1fr;
-    column-gap: 1rem;
+    align-items: center;
+    .stat-items {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+    }
   }
   @media (min-width: 1120px) {
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr;
-    column-gap: 1rem;
+    flex-direction: row;
   }
 `;
 
