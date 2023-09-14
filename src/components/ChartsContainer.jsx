@@ -26,6 +26,9 @@ const ChartsContainer = () => {
 const Wrapper = styled.article`
   margin-top: 4rem;
   text-align: center;
+  background-color: var(--white);
+  padding: 2rem 2rem 2rem 0;
+  border-radius: var(--borderRadiusSmall);
   button {
     background: transparent;
     border-color: transparent;
