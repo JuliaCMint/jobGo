@@ -119,6 +119,18 @@ const Wrapper = styled.section`
     display: none;
     margin: 0;
   }
+  @media (max-width: 300px) {
+    .logo {
+      width: 4.5rem;
+    }
+    .btn {
+      font-size: var(--extra-small-text);
+      gap: 0 0.1rem;
+    }
+    .dropdown-btn {
+      font-size: var(--extra-small-text);
+    }
+  }
   @media (min-width: 992px) {
     position: sticky;
     top: 0;
