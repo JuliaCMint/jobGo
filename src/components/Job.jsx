@@ -82,8 +82,9 @@ const Wrapper = styled.article`
     display: grid;
     grid-template-columns: auto 1fr;
     align-items: center;
-    h5 {
+    h4 {
       letter-spacing: 0;
+      margin-bottom: 0.25rem;
     }
   }
   .main-icon {
@@ -100,9 +101,6 @@ const Wrapper = styled.article`
     margin-right: 2rem;
   }
   .info {
-    h4 {
-      margin-bottom: 0.25rem;
-    }
     p {
       margin: 0;
       text-transform: capitalize;
@@ -155,6 +153,9 @@ const Wrapper = styled.article`
     justify-content: flex-end;
     margin: 4rem 0 1.5rem;
     padding: 0 1.5rem;
+    @media (max-width: 300px) {
+      padding: 0 0.5rem;
+    }
   }
   .btn {
     letter-spacing: var(--letterSpacing);
@@ -166,6 +167,24 @@ const Wrapper = styled.article`
   }
   &:hover .actions {
     visibility: visible;
+  }
+
+  @media (max-width: 300px) {
+    header {
+      padding: 3rem 0.5rem;
+    }
+    .main-icon {
+      width: 50px;
+      height: 50px;
+      margin-right: 1.5rem;
+    }
+    h4 {
+      font-size: 1rem;
+    }
+
+    p {
+      font-size: 0.8rem;
+    }
   }
 `;
 
