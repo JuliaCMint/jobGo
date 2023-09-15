@@ -29,7 +29,7 @@ const PageBtnContainer = () => {
     <Wrapper>
       <button className='prev-btn' onClick={prevPage}>
         <AiOutlineLeft />
-        prev
+        <p>prev</p>
       </button>
       <div className='btn-container'>
         {pages.map((pageNumber) => {
@@ -46,7 +46,8 @@ const PageBtnContainer = () => {
         })}
       </div>
       <button className='next-btn' onClick={nextPage}>
-        next
+        {" "}
+        <p>next</p>
         <AiOutlineRight />
       </button>
     </Wrapper>
@@ -61,25 +62,35 @@ const Wrapper = styled.section`
   justify-content: end;
   flex-wrap: wrap;
   gap: 1rem;
+
   .btn-container {
-    background: var(--primary-100);
     border-radius: var(--borderRadius);
   }
   .pageBtn {
     background: transparent;
     border-color: transparent;
-    width: 50px;
+    width: 40px;
     height: 40px;
-    font-weight: 700;
-    font-size: 1.25rem;
-    color: var(--primary-500);
+    font-weight: 600;
+    font-size: 1rem;
+    color: var(--grey-dark);
     transition: var(--transition);
     border-radius: var(--borderRadius);
     cursor: pointer;
+    @media (max-width: 600px) {
+      width: 25px;
+      height: 25px;
+      font-size: 0.6rem;
+    }
+    @media (max-width: 300px) {
+      width: 20px;
+      height: 20px;
+      font-size: 0.6rem;
+    }
   }
   .active {
-    background: var(--primary-500);
-    color: var(--white);
+    background: var(--primary-light);
+    color: var(--primary-extra-dark);
   }
   .prev-btn,
   .next-btn {
@@ -88,7 +99,7 @@ const Wrapper = styled.section`
     background: var(--white);
     border-color: transparent;
     border-radius: var(--borderRadius);
-    color: var(--primary-500);
+    color: var(--grey-dark);
     text-transform: capitalize;
     letter-spacing: var(--letterSpacing);
     display: flex;
@@ -97,11 +108,22 @@ const Wrapper = styled.section`
     gap: 0.5rem;
     cursor: pointer;
     transition: var(--transition);
+    p {
+      margin: 0;
+    }
+    @media (max-width: 600px) {
+      width: 30px;
+      height: 30px;
+
+      p {
+        display: none;
+      }
+    }
   }
   .prev-btn:hover,
   .next-btn:hover {
-    background: var(--primary-500);
-    color: var(--white);
+    background: var(--primary-light);
+    color: var(--primary-extra-dark);
   }
 `;
 
