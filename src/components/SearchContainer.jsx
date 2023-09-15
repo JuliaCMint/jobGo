@@ -117,6 +117,11 @@ const Wrapper = styled.article`
       margin-top: 0;
     }
   }
+  @media (max-width: 300px) {
+    h3 {
+      font-size: 1.7rem;
+    }
+  }
 `;
 
 export default SearchContainer;
