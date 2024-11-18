@@ -1,6 +1,8 @@
 # jobGo
 
->JavaScript Cardio application allows users to type running or cycling workouts and mark them on the map
+> JobGo Organizer is a React application designed to help users efficiently track their job applications and interviews. With a user-friendly interface and features, JobGo Organizer provides a comprehensive solution for managing your job search process. The interactive Recharts charts and graphs display key metrics such as the number of applications submitted, interviews scheduled, and offers received. 
+
+jobgo-organizer.netlify.app
 
 #### BUILT WITH
 
@@ -8,11 +10,12 @@
 * CSS3
 * JavaScript
 * React
+* * Recharts library
 * Redux
 * Router
-* Moment.js
 * styled-components
+
 
 #### DEMO
 
-[https://cardio-workout-app.netlify.app/](https://jobgo-organizer.netlify.app)
+https://jobgo-organizer.netlify.app
